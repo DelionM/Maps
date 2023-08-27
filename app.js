@@ -1,47 +1,43 @@
-// let map;
-// let coordenadas = {lat: 19.8646067 , lng: -98.9717818};
-
-// //19.8646067,-98.9717818
-
-// function iniciarMap() {
-//     map = new google.maps.Map(document.getElementById('map'),{
-//         center: coordenadas,
-//         zoom: 16
-//     });
-
-//     marker = new google.maps.Marker({
-//         position : coordenadas,
-//         map: map
-//     })
-
-// }
-
-const boton = document.querySelector("#busca");
+const boton = document.getElementById("busca");
 boton.addEventListener("click", Actualizar);
-//ya saque la latitud y longitud
+
+const botonPalabra = document.getElementById("busca2");
+botonPalabra.addEventListener("click", convierteACoordenadas);
+
+//ya saque la latitud  longitud Y palabra
 let latitud = document.getElementById("latitud");
 let longitud = document.getElementById("longitud");
+let entradaPalabra = document.getElementById("palabras");
 
-let map;
-let coordenadas = { lat: 19.8646067, lng: 98.9717818 };
+//de palabra a coordenadas y busca en Mapa
+//Buscar por palabras
 
-function Actualizar() {
-  coordenadas = {
-    lat: parseFloat(latitud.value),
-    lng: parseFloat(longitud.value),
-  };
-  console.log(coordenadas);
-  iniciarMapa();
+
+function convierteACoordenadas() {
+  entradaPalabra = palabras.value;
+  what3words.api.convertToCoordinates(entradaPalabra).then(function (response) {
+    const latitudPalbara = response.coordinates.lat;
+    const longitudPalbara = response.coordinates.lng;
+    //pasar a los imputs los valores de las palabras
+    document.getElementById('latitud').value = latitudPalbara;
+    document.getElementById('longitud').value = longitudPalbara;
+    Actualizar();
+    // console.log('latitud' + latitudPalbara);
+    // console.log('latitud' + longitudPalbara);
+    function Actualizar() {
+      coordenadas = {
+        lat: latitudPalbara,
+        lng: longitudPalbara,
+      };
+      iniciarMapa();
+    }
+  });
 }
 
 function iniciarMapa() {
-
-    latitud = document.getElementById("latitud");
-    longitud = document.getElementById("longitud");
-
   map = new google.maps.Map(document.getElementById("map"), {
     center: coordenadas,
-    zoom: 16,
+    zoom: 15,
   });
   marker = new google.maps.Marker({
     position: coordenadas,
@@ -49,27 +45,70 @@ function iniciarMapa() {
     draggable: true,
   });
 
-  alert("se supone que ya busco la ubicación");
+  // alert("Ubicación actualizada en el mapa");
 
-
-  marker.addListener('dragend', function () {
+  marker.addListener("dragend", function () {
     actualizarInput(marker.getPosition());
   });
-  // AGREGUE LO DE ARRIBA Y NO SE VE AFECTODO AHORA FALTA MANDARLO A LLAMAR
-}
 
-function actualizarInput(position) {
+  function actualizarInput(position) {
     latitud.value = position.lat();
     longitud.value = position.lng();
   }
-//para buscar las palabra pro medio de las coordenadas 
-  what3words.api.convertTo3wa({lat:19.8646067, lng:-98.9717818}, 'es')
-  .then(function(response) {
-      console.log("[convertTo3wa]", response.words);
+
+  marker.addListener("dragend", function () {
+    actualizarInputPalabra(marker.getPosition());
   });
 
-  //para coordenadas
-  what3words.api.convertToCoordinates(" .rigor.ante")
-  .then(function(response) {
-      console.log("[convertToCoordinates]", response.coordinates);
-  });
+  function actualizarInputPalabra(position) {
+    what3words.api.convertTo3wa({ lat: parseFloat(latitud.value), lng: parseFloat(longitud.value)}, 'es')
+    .then(function(response) {
+      document.getElementById('palabras').value = response.words;
+    });
+  }
+}
+//fin de mi boton de API 3WORDS💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀💀
+//Buscar por coordenadas
+
+function Actualizar() {
+  coordenadas = {
+    lat: parseFloat(latitud.value),
+    lng: parseFloat(longitud.value),
+  };
+  iniciarMapa();
+
+  function iniciarMapa() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: coordenadas,
+      zoom: 15,
+    });
+    marker = new google.maps.Marker({
+      position: coordenadas,
+      map: map,
+      draggable: true,
+    });
+
+    // alert("Ubicación actualizada en el mapa primer boton");
+    actualizarInputPalabra();
+
+    marker.addListener("dragend", function () {
+      actualizarInput(marker.getPosition());
+    });
+
+    function actualizarInput(position) {
+      latitud.value = position.lat();
+      longitud.value = position.lng();
+    }
+
+    marker.addListener("dragend", function () {
+      actualizarInputPalabra(marker.getPosition());
+    });
+
+    function actualizarInputPalabra(position) {
+      what3words.api.convertTo3wa({ lat: parseFloat(latitud.value), lng: parseFloat(longitud.value)}, 'es')
+      .then(function(response) {
+        document.getElementById('palabras').value = response.words;
+      });
+    }
+  }
+}
