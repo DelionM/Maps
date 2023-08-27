@@ -1,235 +1,199 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #e2e9f7;
 }
 
-
 header {
-	background-color: #4a60cd;
-	color: #fff;
-	padding: 20px;
+  background-color: #4a60cd;
+  color: #fff;
+  padding: 8px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-	text-align: center;
+  text-align: center;
   font-size: 20px;
 }
 
 nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-	justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 
 }
-
 
 nav li {
-	margin: 0 10px;
+  margin: 0 10px;
 
 }
-
 
 nav a {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 
 }
 
-
 nav h1 {
-	margin: 0;
-    color: #fff;
+  margin: 0;
+  color: #fff;
 }
 
 /* estilos para encabezado 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆v👆👆👆👆👆👆👆👆👆👆👆 */
-  
 
-.controladores{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.controladores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #latitud,
 #longitud,
-#palabras{
-    max-width: 190px;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 25px;
-    color: #000000;
-    padding: 15px 5px 10px 20px;
-    box-shadow: inset 8px 8px 8px #b9bee3,
-                inset -8px -8px 8px #dbdfe4;
-    border-radius: 25px;
-    margin-top: 2%;
-  }
-  
-  #latitud::placeholder,
-  #longitud::placeholder
-  #palabras::placeholder {
-    color: #555;
-    transition: all 0.3s ease;
-  }
-  
-  #latitud:focus::placeholder,
-  #longitud:focus::placeholder,
-  #palabras
-  {
-    color: #999;
-  }
-
-  /* 989898989899899999999999999999999888*/
-  #busca {
-    outline: none;
-    cursor: pointer;
-    border: none;
-    padding: 0.9rem 2rem;
-    margin-top: 2%;
-    font-family: inherit;
-    font-size: 25px;
-    position: relative;
-    display: inline-block;
-    letter-spacing: 0.05rem;
-    font-weight: 700;
-    font-size: 17px;
-    border-radius: 500px;
-    overflow: hidden;
-    background: #61b07a;
-    color: rgb(254, 255, 248);
-   }
-   
-   #busca span {
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-   }
-   
-   #busca:hover span {
-    color: #e7e9f8;
-   }
-   
-   #busca::before,
-   #busca::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-   }
-   
-   #busca::before {
-    content: "";
-    background: #a92727;
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
-   }
-   
-   #busca:hover::before {
-    transform: translate3d(100%, 0, 0);
-   }
-   
-
-  /* estilos para botones 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆v👆👆👆👆👆👆👆👆👆👆👆 */
-
-  
-   #map {
-    height: 70vh;
-    width: 80%;
-    margin: 10%;
-    margin-top: 6px;
-    margin-bottom: 2%;
-    background-color: #9ba6f3;
-    border-radius: 4%;
-} 
-
-
-
-footer {
-  background-color: #4a60cd;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-footer h1 {
-  margin: 0;
-  font-size: 3vh;
-}
-footer a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 3vh;
-
-  padding: 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-footer a:hover {
-  background-color: #fff;
-  color: #333;
+#palabras {
+  max-width: 190px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 22px;
+  color: #000000;
+  padding: 15px 5px 10px 20px;
+  box-shadow: inset 8px 8px 8px #b9bee3,
+    inset -8px -8px 8px #dbdfe4;
+  border-radius: 25px;
+  margin-top: 2%;
 }
 
- /* Responsivo  */
+#latitud::placeholder,
+#longitud::placeholder #palabras::placeholder {
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+#latitud:focus::placeholder,
+#longitud:focus::placeholder,
+#palabras {
+  color: #999;
+}
+
+#palabras {
+  font-size: 20px;
+}
+
+/* 989898989899899999999999999999999888*/
+
+
+
+#busca, #busca2 {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin-top: 2%;
+  font-family: inherit;
+  font-size: 25px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #aadcf9;
+  color: rgb(254, 255, 248);
+}
+
+#busca span, #busca2 span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+#busca:hover span,
+#busca2:hover span {
+  color: #000000;
+}
+
+#busca::before,
+#busca::after,
+#busca2::before,
+#busca2::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#busca::before,
+#busca2::before {
+  content: "";
+  background: #4a60cd;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+#busca:hover::before,
+#busca2:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+
+/* estilos para botones 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆v👆👆👆👆👆👆👆👆👆👆👆 */
+
+
+#map {
+  height: 70vh;
+  width: 80%;
+  margin: 10%;
+  margin-top: 6px;
+  margin-bottom: 2%;
+  /* background-color: #9ba6f3; */
+  background:url(img/mundo3.gif);
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4%;
+}
+
+
+/* Responsivo  */
 
 @media only screen and (max-width: 768px) {
-	nav ul {
-		flex-wrap: wrap;
-	}
+  nav ul {
+    flex-wrap: wrap;
+  }
 
-	nav li {
-		margin: 10px 0;
-	}
-    /* responsivo encavezado 👆 */
+  nav li {
+    margin: 10px 0;
+  }
 
-    .controladores{
-        flex-wrap: wrap;
-        margin-top: -4%;
-    }
+  /* responsivo encavezado 👆 */
 
-    #latitud,
-    #longitud,
-    #palabras,
-    #busca {
+  .controladores {
+    flex-wrap: wrap;
+    margin-top: -4%;
+  }
+
+  #latitud,
+  #longitud,
+  #palabras,
+  #busca {
     margin-top: 5%;
     flex-direction: column;
     font-size: 18px;
-    }
-    #busca{
-        margin: 3%;
-    }
-    #map{
-      height: 45vh;
-    }
+  }
 
-    footer {
-      text-align: left;
-    }
-    footer nav {
-      display: flex;
-      flex-direction: column;
-    }
-    footer nav ul {
-      flex: 1;
-    }
-    footer nav li {
-      margin: 10px 0;
-    }
+  #busca {
+    margin: 3%;
+  }
 
+  #map {
+    height: 45vh;
+  }
 
+ 
 }
-
-
-
-
-
-
-
-/* PANTALLA TELEFONOS 54313213232323223132 */
-
-  
