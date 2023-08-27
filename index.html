@@ -4,9 +4,9 @@
     <title>Geolocalización D3</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/mundo.webp">
+    <link rel="icon" href="img/mundo.webp" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=44Q99BEN"></script>
+    <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=WL5D4YZB"></script>
   </head>
 
   <body>
@@ -19,28 +19,19 @@
         </ul>
       </nav>
     </header>
-      <section class="controladores">
-
-        <input placeholder="Latitud" type="number" id="latitud" />
-        <input placeholder="Longitud" type="number" id="longitud" />
-        <input placeholder="Palabras" type="text" id="palabras" />
-        <button id="busca">
-          <span>Localizar 🔎</span>
-        </button>
-      </section>
-
-      <div id="map"></div>
-
-
-      <footer>
-        <h1>©D3L10N 2023 </h1>
-        <nav>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/brayan-giovanni-delion-mart%C3%ADnez-410b58265/">Linkedind</a></li>
-            <li><a href="https://github.com/DelionM">GitHub</a></li>
-          </ul>
-        </nav>
-      </footer>
+    <section class="controladores">
+      <input placeholder="Latitud" type="number" id="latitud" />
+      <input placeholder="Longitud" type="number" id="longitud" />
+      <input placeholder="Palabras" type="text" id="palabras"  style="  width: 1300vh; "/>
+      <button id="busca">
+        <span>Localizar 🔎</span>
+      </button>
+      <button id="busca2">
+        <span>Localizar Palabra 🔎</span>
+      </button>
+    </section>
+    <div id="map"></div>
+    <p>genoma.abierta.pudo   longitud -98.967151  latitud 19.875121</p>
     <script src="app.js"></script>
     <!-- api google -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl6mfoS8AE5woNLZSUdmVN5ZrSjM1WVn4&callback=IniciarMapa"></script>
