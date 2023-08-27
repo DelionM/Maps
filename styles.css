@@ -62,7 +62,7 @@ nav h1 {
     font-size: 25px;
     color: #000000;
     padding: 15px 5px 10px 20px;
-    box-shadow: inset 8px 8px 8px #9ba6f3,
+    box-shadow: inset 8px 8px 8px #b9bee3,
                 inset -8px -8px 8px #dbdfe4;
     border-radius: 25px;
     margin-top: 2%;
@@ -145,7 +145,7 @@ nav h1 {
     margin: 10%;
     margin-top: 6px;
     margin-bottom: 2%;
-    background-color: #98c3a1;
+    background-color: #9ba6f3;
     border-radius: 4%;
 } 
 
