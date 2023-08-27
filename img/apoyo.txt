@@ -1,0 +1,65 @@
+
+
+
+const boton2 = document.querySelector("busca2");
+let palabra = document.getElementById("palabras");
+if (boton2 == true){
+
+// Define la función que deseas ejecutar al hacer clic en el botón
+function miFuncion() {
+  alert("se supone que ya busco la ubicación NUMERO DOS");
+}
+
+// Asigna la función al evento 'click' del botón
+boton.addEventListener("click", miFuncion);
+}
+else
+alert('aaaaaa');
+
+
+
+//para buscar las palabra pro medio de las coordenadas y convertir a palabra
+
+//   function Busca(){
+    
+//   what3words.api.convertTo3wa({lat:19.8646067, lng:-98.9717818}, 'es')
+//   .then(function(response) {
+//     console.log("La palabra es: ", response.words);
+//   });
+
+//   }
+// // de palabra a coordenada
+// what3words.api.convertToCoordinates("filled.count.soap")
+//   .then(function(response) {
+//      console.log("convertir a cooredenadas ", response.coordinates);
+//      console.log("convertir a latitud ", response.coordinates.lat);
+//      console.log("convertir a longitud ", response.coordinates.lng);
+//   });
+
+
+manila filipinas
+///tened.acude.apellido
+
+
+
+// LO DE HASTA AARIBA
+
+// let map;
+// let coordenadas = {lat: 19.8646067 , lng: -98.9717818};
+
+// //19.8646067,-98.9717818
+
+// function iniciarMap() {
+//     map = new google.maps.Map(document.getElementById('map'),{
+//         center: coordenadas,
+//         zoom: 16
+//     });
+
+//     marker = new google.maps.Marker({
+//         position : coordenadas,
+//         map: map
+//     })
+
+// }
+
+
