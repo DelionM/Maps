@@ -82,8 +82,6 @@ nav h1 {
 
 /* 989898989899899999999999999999999888*/
 
-
-
 #busca, #busca2 {
   outline: none;
   cursor: pointer;
@@ -141,9 +139,7 @@ nav h1 {
   transform: translate3d(100%, 0, 0);
 }
 
-
 /* estilos para botones 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆v👆👆👆👆👆👆👆👆👆👆👆 */
-
 
 #map {
   height: 70vh;
@@ -151,15 +147,12 @@ nav h1 {
   margin: 10%;
   margin-top: 6px;
   margin-bottom: 2%;
-  /* background-color: #9ba6f3; */
-  background:url(img/espera.webp);
+  background-color: #c6c8dc;
   background-size: 30%;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 4%;
 }
-
-
 /* Responsivo  */
 
 @media only screen and (max-width: 768px) {
@@ -194,8 +187,5 @@ nav h1 {
   #map {
     height: 45vh;
     background-size: 80%;
-
   }
-
- 
 }
