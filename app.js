@@ -11,7 +11,7 @@ let entradaPalabra = document.getElementById("palabras");
 
 function check(){
   if(entradaPalabra.value == "")
-    alert('Ingresa la cadena de palabras en el input')
+    alert('Ingrese las palabras para su busqueda. Ejemplo: casa.moto.carro')
   else
   {
     convierteACoordenadas();
