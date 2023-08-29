@@ -1,17 +1,34 @@
 const boton = document.getElementById("busca");
-boton.addEventListener("click", Actualizar);
+boton.addEventListener("click", check2);
 
 const botonPalabra = document.getElementById("busca2");
-botonPalabra.addEventListener("click", convierteACoordenadas);
+botonPalabra.addEventListener("click", check);
 
 //ya saque la latitud  longitud Y palabra
 let latitud = document.getElementById("latitud");
 let longitud = document.getElementById("longitud");
 let entradaPalabra = document.getElementById("palabras");
 
+function check(){
+  if(entradaPalabra.value == "")
+    alert('Ingresa la cadena de palabras en el input')
+  else
+  {
+    convierteACoordenadas();
+  }
+}
+
+function check2(){
+  if(latitud.value == "" || longitud.value == "")
+    alert('Asegúrese de ingresar Latitud y Longitud para su busqueda')
+  else
+  {
+    Actualizar();
+  }
+}
+
 //de palabra a coordenadas y busca en Mapa
 //Buscar por palabras
-
 
 function convierteACoordenadas() {
   entradaPalabra = palabras.value;
